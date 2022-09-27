@@ -1,0 +1,29 @@
+.container {
+  border: 1px solid black;
+  width: fit-content;
+  padding: 20px;
+}
+
+.button {
+  display: block;
+  margin-top: 20px;
+}
+
+.labelName {
+  display: block;
+}
+
+.inputName {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.labelNumber {
+  display: block;
+}
+
+.inputNumber {
+  display: block;
+  margin-top: 5px;
+}
