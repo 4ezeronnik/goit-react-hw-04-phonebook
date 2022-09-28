@@ -5,10 +5,12 @@ import ContactForm from './ContactForm/ContactForm';
 import Filter from './Filter/Filter';
 import ContactList from './ContactList/ContactList';
 
-
+const contacts = localStorage.getItem('contacts');
+const parsedContacts = JSON.parse(contacts);
+    
 export default function App() {
 
-  const [contacts, setContacts] = useState([]);
+  const [contacts, setContacts] = useState([] ?? parsedContacts);
   const [filter, setFilter] = useState('');
 
   const addContact = (text, number) => {
@@ -45,11 +47,9 @@ export default function App() {
   };
 
   useEffect(() => {
-    const contacts = localStorage.getItem('contacts');
-    const parsedContacts = JSON.parse(contacts);
-    if (parsedContacts) {
+   
       setContacts(parsedContacts);
-    }
+
   }, []);
   
   useEffect(() => {
