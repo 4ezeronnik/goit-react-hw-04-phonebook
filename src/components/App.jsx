@@ -11,7 +11,6 @@ export default function App() {
   const [contacts, setContacts] = useState([]);
   const [filter, setFilter] = useState('');
 
-  //Скоріше за все неправильна функція addContact, звернути на неї увагу (а саме на setContacts)
   const addContact = (text, number) => {
 
     const contact = {
