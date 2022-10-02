@@ -47,12 +47,13 @@ export default function App() {
   };
 
   useEffect(() => {
-   
-      setContacts(parsedContacts);
+ 
+      setContacts(parsedContacts ?? []);
 
   }, []);
   
   useEffect(() => {
+
     localStorage.setItem('contacts', JSON.stringify(contacts))
   }, [contacts]);
 
